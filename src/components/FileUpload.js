@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Button, TextField, Container } from '@mui/material';
 import { toast } from 'react-toastify';
+let BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:8000/';
 
 const FileUpload = () => {
     const [file, setFile] = useState(null);
@@ -16,7 +17,7 @@ const FileUpload = () => {
         formData.append('file', file);
 
         try {
-            await axios.post('http://localhost:8000/upload/', formData, {
+            await axios.post(`${BASE_URL}upload/`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
@@ -24,7 +25,14 @@ const FileUpload = () => {
             toast.success('File uploaded successfully, processing in the background.');
         } catch (error) {
             console.error('Error uploading file:', error);
-            toast.error('Failed to upload the file. Please try again.');
+            let the_error ='Failed to upload the file. Please try again.'
+            if (error.response && error.response.data) {
+                if (error.response.data.file) {
+                    the_error = error.response.data.file[0];
+                }
+
+            }
+            toast.error(the_error);
         }
     };
 

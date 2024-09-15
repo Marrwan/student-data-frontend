@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Student Voter Replication System - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The frontend application for the Student Voter Replication System provides a user-friendly interface for managing and visualizing student voter data. Built with React and styled using Material-UI, it facilitates file uploads, data viewing, and real-time interaction with the backend.
 
-In the project directory, you can run:
+### Features:
+- User interface for uploading CSV/Excel files with student voter data.
+- Display of processed data with pagination and filtering.
+- Real-time updates on file processing status.
+- Integration with backend services via REST API.
+- Material-UI for modern, responsive design.
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ensure you have the following installed:
+- Node.js (version 14.x or higher)
+- npm
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Frontend Setup
 
-### `npm test`
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Marrwan/student-data-frontend.git
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Navigate to the project directory:
+    ```bash
+    cd student-data-frontend
+    ```
 
-### `npm run build`
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Start the development server:
+    ```bash
+    npm start
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. Open your browser and navigate to `http://localhost:3000` to view the application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Running Tests
 
-### `npm run eject`
+To run unit tests for the frontend, use:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm test

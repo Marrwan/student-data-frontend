@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TextField, Button, Pagination, Container } from '@mui/material';
 import { toast } from 'react-toastify';
-let BASE_URL = process.env.REACT_APP_BASE_URL;
+let BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:8000/';
 
-console.log({BASE_URL})
 const StudentList = () => {
     const [students, setStudents] = useState([]);
     const [page, setPage] = useState(1);
@@ -13,7 +12,7 @@ const StudentList = () => {
 
     const fetchStudents = async (page, department = '') => {
         try {
-            const response = await axios.get(`http://localhost:8000/students/?page=${page}&department=${department}`);
+            const response = await axios.get(`${BASE_URL}students/?page=${page}&department=${department}`);
             setStudents(response.data.results);
             setTotalPages(Math.ceil(response.data.count / 10));
         } catch (error) {
