@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TextField, Button, Pagination, Container } from '@mui/material';
 import { toast } from 'react-toastify';
-let BASE_URL = process.env.REACT_APP_BASE_URL || 'https://django-student-data-processor.onrender.com/';
-
+import {BASE_URL} from "../base";
 const StudentList = () => {
     const [students, setStudents] = useState([]);
     const [page, setPage] = useState(1);
