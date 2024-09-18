@@ -33,13 +33,17 @@ Ensure you have the following installed:
     ```bash
     npm install
     ```
+4. Create a .env file from the .env.example and update it with your backend url
+   ```shell
+   cp .env.example .env
+   ```
 
-4. Start the development server:
+5. Start the development server:
     ```bash
     npm start
     ```
 
-5. Open your browser and navigate to `http://localhost:3000` to view the application.
+6. Open your browser and navigate to `http://localhost:3000` to view the application.
 
 ### Running Tests
 
